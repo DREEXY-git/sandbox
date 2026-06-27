@@ -1,0 +1,19 @@
+# Lefthook: ローカルの一次ゲート。
+# 注意: hookは --no-verify で回避可能。真のゲートは CI + Merge Queue。
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "*.{js,ts,jsx,tsx,json}"
+      run: pnpm biome check --write --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
+
+pre-push:
+  parallel: true
+  commands:
+    typecheck:
+      run: pnpm typecheck
+    test:
+      run: pnpm test
+    knip:
+      run: pnpm knip

@@ -1,0 +1,17 @@
+# Codex プロジェクト設定。AGENTS.md を共通の指示源として読む。
+# 認証情報はここに書かず環境変数 / シークレット管理から渡す。
+
+# 承認モード: untrusted / on-failure / on-request / never
+approval_policy = "on-request"
+
+# サンドボックス: read-only / workspace-write / danger-full-access
+sandbox_mode = "workspace-write"
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+env = { CONTEXT7_API_KEY = "${CONTEXT7_API_KEY}" }

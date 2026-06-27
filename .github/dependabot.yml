@@ -1,0 +1,8 @@
+# Dependabot（GHASの無料部分）。Renovateを主に使う場合はどちらか一方に統一する。
+# ここではGitHub Actions本体の更新のみDependabotに任せ、npm依存はRenovateに寄せる例。
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly

@@ -1,0 +1,27 @@
+node_modules/
+dist/
+build/
+coverage/
+.turbo/
+.next/
+out/
+
+# env / secrets — 絶対にコミットしない
+.env
+.env.*
+!.env.example
+
+# test artifacts
+playwright-report/
+test-results/
+.vitest/
+
+# editor / os
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Claude Code ローカル設定（個人のオーバーライド）
+.claude/settings.local.json
