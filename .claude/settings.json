@@ -21,17 +21,8 @@
       "Bash(gh run:*)",
       "Bash(gh workflow:*)"
     ],
-    "ask": [
-      "Bash(git push:*)",
-      "Bash(gh pr merge:*)",
-      "Bash(vercel:*)",
-      "Bash(rm:*)"
-    ],
-    "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./**/secrets/**)"
-    ]
+    "ask": ["Bash(git push:*)", "Bash(gh pr merge:*)", "Bash(vercel:*)", "Bash(rm:*)"],
+    "deny": ["Read(./.env)", "Read(./.env.*)", "Read(./**/secrets/**)"]
   },
   "hooks": {
     "PostToolUse": [
