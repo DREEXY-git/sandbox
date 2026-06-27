@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":dependencyDashboard",
-    ":semanticCommits"
-  ],
+  "extends": ["config:recommended", ":dependencyDashboard", ":semanticCommits"],
   "_comment": "本番運用では <org>/renovate-config の共有presetを extends して全repo統一する",
   "labels": ["dependencies"],
   "schedule": ["before 6am on monday"],
